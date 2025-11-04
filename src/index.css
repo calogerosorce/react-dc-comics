@@ -1,10 +1,12 @@
 @import url('bootstrap');
 @import url('bootstrap-icons');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans"
 }
 
 header {
@@ -17,7 +19,7 @@ header {
   a {
     color: black !important;
     font-size: 30PX;
-    padding: 60px 15px !important;
+    padding: 57px 15px !important;
   }
 
   a:hover {
@@ -28,8 +30,14 @@ header {
 
 main {
 
+  z-index: 2;
+
   .content {
-    padding-left: 90px;
+    h1 {
+      font-size: 35px;
+    }
+
+    padding-left: 280px;
     display: flex;
     align-items: center;
     min-height: 15vh;
@@ -45,7 +53,7 @@ main {
     text-align: center;
     display: flex;
     align-items: center;
-    padding-left: 90px;
+    padding-left: 280px;
 
     img {
       width: 60px;
@@ -62,6 +70,74 @@ main {
       text-decoration: none;
       color: white;
       padding-right: 3rem;
+    }
+  }
+}
+
+footer {
+  .all {
+    background-image: url(./img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    color: white;
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      z-index: 1;
+    }
+  }
+
+
+  .up {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  ul {
+    padding: 2rem;
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  li {
+    list-style: none;
+    color: #909190;
+    font-size: 18px;
+  }
+
+  .low {
+    background-color: #303030;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+
+    button {
+      padding: 8px;
+      color: white;
+      border-color: #0282f9;
+      background-color: transparent
+    }
+
+    .social {
+      a {
+        padding: 8px;
+      }
+
+      .follow {
+        color: #0282f9;
+      }
     }
   }
 }
