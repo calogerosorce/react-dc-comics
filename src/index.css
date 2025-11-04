@@ -1,4 +1,5 @@
 @import url('bootstrap');
+@import url('bootstrap-icons');
 
 * {
   padding: 0;
@@ -16,5 +17,21 @@ header {
   a {
     color: black !important;
     font-size: 30PX;
+  }
+}
+
+main {
+
+  .content {
+    h1 {
+      padding-left: 90px;
+    }
+
+    display: flex;
+    align-items: center;
+    min-height: 20vh;
+    width: 100%;
+    background-color: #1d1c1c;
+    color: white
   }
 }
