@@ -11,27 +11,57 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2rem 0;
   align-items: center;
+  min-height: 15vh;
 
   a {
     color: black !important;
     font-size: 30PX;
+    padding: 60px 15px !important;
+  }
+
+  a:hover {
+    color: #0282f9 !important;
+    border-bottom: solid 4px #0282f9 !important;
   }
 }
 
 main {
 
   .content {
-    h1 {
-      padding-left: 90px;
-    }
-
+    padding-left: 90px;
     display: flex;
     align-items: center;
-    min-height: 20vh;
+    min-height: 15vh;
     width: 100%;
     background-color: #1d1c1c;
     color: white
+  }
+
+  .content_azzurro {
+    padding: 2rem;
+    background-color: #0282f9;
+    min-height: 20vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+
+    img {
+      width: 60px;
+      padding-right: 1rem;
+
+
+    }
+
+    .locator {
+      width: 50px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding-right: 3rem;
+    }
   }
 }
