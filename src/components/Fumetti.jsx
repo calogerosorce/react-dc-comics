@@ -158,6 +158,7 @@ export default function Fumetti() {
     return (
         <div className="row g-4 p-5">
             {comics.map(items =>
+                /* Aggiungento justify-content-center alla card li posso posizionare perfettamente avento i fumetti quadrati*/
                 <div key={items.id} className="card col-12 col-md-4 col-lg-2 align-items-center">
                     <img src={items.thumb} alt="" />
                     <p>{items.series}</p>
