@@ -1,72 +1,148 @@
 export default function List() {
 
     const list_one = [
-        [
-            <h3><strong>DC COMICS</strong></h3>,
+        {
+            id: 1,
+            title: 'DC COMICS',
+            links: [
+                {
+                    id: 2,
+                    text: 'Characters'
+                },
+                {
+                    id: 3,
+                    text: 'Comics'
+                },
+                {
+                    id: 4,
+                    text: 'Movies'
 
-            <a href=""><li>Characters</li></a>,
+                },
+                {
+                    id: 5,
+                    text: 'TV'
 
-            <a href=""><li>Comics</li></a>,
+                },
+                {
+                    id: 6,
+                    text: 'Games'
 
-            <a href=""><li>Movies</li></a>,
+                },
+                {
+                    id: 7,
+                    text: 'Videos'
 
-            <a href=""><li>TV</li></a>,
+                },
 
-            <a href=""><li>Games</li></a>,
+                {
+                    id: 8,
+                    text: 'News'
 
-            <a href=""><li>Videos</li></a>,
+                }
+            ]
+        },
 
-            <a href=""><li>News</li></a>
-        ],
 
-        [
-            <h3><strong>SHOPS</strong></h3>,
+        {
+            id: 9,
+            title: 'SHOP',
+            links: [
 
-            <a href=""><li>Shop DC</li></a>,
+                {
+                    id: 10,
+                    title: '',
+                    text: 'Shop DC'
 
-            <a href=""><li>Shop DC Collectibles</li></a>
-        ]
+                },
+
+                {
+                    id: 11,
+                    title: '',
+                    text: 'Shop DC Collectibles'
+                }
+            ]
+
+        }
+
     ]
 
     const list_two = [
-        [
-            <h3><strong>DC</strong></h3>,
-
-            <a href=""><li>Terms Of Use</li></a>,
-
-            <a href=""><li>Privacy policy (New)</li></a>,
-
-            <a href=""><li>Ad Choices</li></a>,
-
-            <a href=""><li>Advertising</li></a>,
-
-            <a href=""><li>Jobs</li></a>,
-
-            <a href=""><li>Subscriptions</li></a>,
-
-            <a href=""><li>Talent Workshops</li></a>,
-
-            <a href=""><li>CPSC Certificates</li></a>,
-
-            <a href=""><li>Ratings</li></a>,
-
-            <a href=""><li>Shop Help</li></a>,
-
-            <a href=""><li>Contact Us</li></a>
-        ],
-        [
-            <h3><strong>DC COMICS</strong></h3>,
-
-            <a href=""><li>DC</li></a>,
-
-            <a href=""><li>MAD Magazine</li></a>,
-
-            <a href=""><li>DC Kids</li></a>,
-
-            <a href=""><li>DC Universe</li></a>,
-
-            <a href=""><li>DC Power VIsa</li></a>
-        ]
+        {
+            id: 1,
+            title: 'DC',
+            links: [
+                {
+                    id: 2,
+                    text: 'Terms Of Use'
+                },
+                {
+                    id: 3,
+                    text: 'Privacy policy (New)'
+                },
+                {
+                    id: 4,
+                    text: 'Ad Choices'
+                },
+                {
+                    id: 5,
+                    text: 'Advertising'
+                },
+                {
+                    id: 6,
+                    text: 'Jobs'
+                },
+                {
+                    id: 7,
+                    text: 'Subscriptions'
+                },
+                {
+                    id: 8,
+                    text: 'Talent Workshops'
+                },
+                {
+                    id: 9,
+                    text: 'CPSC Certificates'
+                },
+                {
+                    id: 10,
+                    text: 'Ratings'
+                },
+                {
+                    id: 11,
+                    text: 'Shop Help'
+                },
+                {
+                    id: 12,
+                    text: 'Contact Us'
+                }
+            ]
+        },
+        {
+            id: 13,
+            title: 'DC COMICS',
+            links: [
+                {
+                    id: 14,
+                    text: 'DC'
+                },
+                {
+                    id: 15,
+                    text: 'MAD Magazine'
+                },
+                {
+                    id: 16,
+                    text: 'DC Kids'
+                },
+                {
+                    id: 17,
+                    text: 'DC Universe'
+                },
+                {
+                    id: 18,
+                    text: 'DC Power Visa'
+                }
+            ]
+        }
 
     ]
 
@@ -74,11 +150,25 @@ export default function List() {
         <>
             <div className="col-0">
 
-                {list_one.map((items, i) => (<ul key={i}>{items}</ul>))}
+                {list_one.map((items) => (
+                    <ul key={items.id}>
+                        <h3><strong>{items.title}</strong></h3>
+                        {items.links.map((link) => (
+                            <a href="" key={link.id}><li>{link.text}</li></a>
+                        ))}
+                    </ul>
+                ))}
 
             </div>
 
-            {list_two.map((items, i) => (<ul key={i}>{items}</ul>))}
+            {list_two.map((items, i) => (
+                <ul key={items.id}>
+                    <h3><strong>{items.title}</strong></h3>
+                    {items.links.map((link) => (
+                        <a href="" key={link.id}><li>{link.text}</li></a>
+                    ))}
+                </ul>
+            ))}
         </>
 
     )
