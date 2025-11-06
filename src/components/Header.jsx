@@ -1,14 +1,14 @@
 import logo from "../img/dc-logo.png"
 import NavBar from "./NavBar"
 
-export default function Header() {
+export default function Header({ menu }) {
 
 
 
     return (
         <header>
             <img width={70} src={logo} alt="Logo" />
-            <NavBar />
+            <NavBar menu={menu} />
         </header>
     )
 } 

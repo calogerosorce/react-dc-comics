@@ -1,6 +1,6 @@
 import ContentAzzurro from "./ContentAzzurro"
 import Fumetti from "./Fumetti"
-export default function Main() {
+export default function Main({ comics }) {
 
 
 
@@ -13,7 +13,7 @@ export default function Main() {
                 </div>
             </div>
             <div className="content">
-                <Fumetti />
+                <Fumetti comics={comics} />
                 <button className="btn px-5"><strong>LOAD MORE</strong></button>
             </div>
             <ContentAzzurro />

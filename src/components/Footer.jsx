@@ -6,7 +6,7 @@ import twitter from "../img/footer-twitter.png"
 import youtube from "../img/footer-youtube.png"
 import List from "./List"
 
-export default function Footer() {
+export default function Footer({ list_one, list_two }) {
 
 
 
@@ -16,7 +16,7 @@ export default function Footer() {
         <footer>
             <div className="all">
                 <div className="up">
-                    <List />
+                    <List list_one={list_one} list_two={list_two} />
 
                 </div>
                 <div>
